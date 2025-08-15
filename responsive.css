@@ -289,6 +289,36 @@
     .form-group {
         margin-bottom: var(--space-sm);
     }
+
+	/* Add side padding to hero section */
+    .hero {
+        padding-left: var(--space-sm);
+        padding-right: var(--space-sm);
+    }
+
+    /* Certificate links: stack vertically, each on one line */
+    .cert-links-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .cert-link,
+    .cert-pub-link {
+        width: 100%;
+        justify-content: flex-start;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Contact info: fix email overflow */
+    .contact-info .info-content a,
+    .contact-info .info-content p {
+        word-break: break-all;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        font-size: 0.97rem;
+    }
 }
 
 /* Small Mobile (360px and below) */
@@ -1173,3 +1203,4 @@
         gap: 1rem !important;
     }
 }
+
