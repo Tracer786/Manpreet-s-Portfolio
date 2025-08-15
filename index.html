@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manpreet's Portfolio</title>
+    <meta name="description"
+        content="Professional portfolio of Manpreet Singh - Application Engineer with expertise in web development and data science">
+
+    <!-- Favicon: MS in a circle (SVG) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg width='64' height='64' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232563eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='32' font-family='Montserrat,Arial,sans-serif' fill='white' font-weight='bold'%3EMS%3C/text%3E%3C/svg%3E">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- EmailJs service for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "lw3PEtCUr2ikVMsW9",
+            });
+        })();
+    </script>
+
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="particles" id="particles-js"></div>
+
+    <!-- Navigation -->
+    <header class="header improved-header">
+        <div class="container">
+            <nav class="navbar improved-navbar">
+                <a href="#" class="logo improved-logo">
+                    <span class="logo-text">MS</span>
+                    <span class="logo-glow"></span>
+                    <!-- User image for logo hover -->
+                    <img src="images/user.jpeg" alt="Manpreet Singh" class="logo-img" loading="lazy" />
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#home" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link"><span>Experience</span></a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link"><span>Skills</span></a></li>
+                    <li class="nav-item"><a href="#achievements" class="nav-link"><span>Achievements</span></a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="tagline">
+                        <!-- <span class="tagline-text">Innovate. Create. Elevate.</span> -->
+                        <span class="tagline-text">Innovate. Build. Transform.</span>
+                    </div>
+                    <h1 class="hero-title outstanding-title">
+                        <span class="title-text">Manpreet Singh</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="subtitle-text">Application Engineer & Developer</span>
+                    </h2>
+                    <p class="hero-description">
+                        Application Engineer at RapidShyp with a Computer Engineering degree (Thapar University, CGPA
+                        8.39). Hands-on experience in full-stack development, machine learning, and data science.
+                        Passionate about solving complex problems and exploring new tech domains.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="docs/Manpreet_Singh_CV.pdf" class="btn btn-primary" download>
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Contact Me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/tracer786" class="social-icon github" aria-label="GitHub"
+                            target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/manpreet-singh-67334b21b/" class="social-icon linkedin"
+                            aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="gradient-border">
+                            <img src="images/user.jpeg" alt="Manpreet Singh" class="profile-img" loading="lazy">
+                        </div>
+                        <div class="tech-orb orb-1"></div>
+                        <div class="tech-orb orb-2"></div>
+                        <div class="tech-orb orb-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">About Me</span>
+                </h2>
+                <div class="section-subtitle">Get to know me</div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-bio">
+                        <p>
+                            I am a Computer Engineering graduate from Thapar University, currently working as an
+                            Associate Application Engineer at RapidShyp. My work spans building robust platforms,
+                            leveraging data, and improving operational efficiency. I enjoy tackling complex challenges
+                            and collaborating to deliver reliable solutions.
+                        </p>
+                        <p>
+                            With a strong foundation in data structures, algorithms, and modern tech stacks, I enjoy
+                            exploring new technologies and applying them to solve real-world challenges. My projects
+                            span web development, machine learning, IoT, and NLP, always focused on practical solutions
+                            and reliability.
+                        </p>
+                        <p>
+                            I value continuous learning and teamwork, and am dedicated to creating solutions that drive
+                            value for users and organizations.
+                        </p>
+                    </div>
+                    <div class="about-stats aligned-about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div><span class="plus">+</span>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1">0</div>
+                            <!-- <span class="plus">+</span> -->
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="20">0</div><span class="plus">+</span>
+                            <div class="stat-label">Technologies Used</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-link active" data-tab="education" aria-label="Education Tab">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </button>
+                        <button class="tab-link" data-tab="certifications" aria-label="Certifications Tab">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certifications</span>
+                        </button>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-pane active" id="education-tab">
+                            <div class="education-item">
+                                <div class="education-date">2020 - 2024</div>
+                                <div class="education-content">
+                                    <h3>Thapar University, Patiala</h3>
+                                    <p class="degree">B.E. Computer Engineering</p>
+                                    <p class="date">CGPA: 8.39/10</p>
+                                    <p class="details">Coursework: Data Structures & Algorithms, Machine Learning, Data
+                                        Science, Database Management Systems, Software Engineering, Operating Systems,
+                                        Computer Networks</p>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <div class="education-date">2020</div>
+                                <div class="education-content">
+                                    <h3>Sanawar An Institute for Children</h3>
+                                    <p class="degree">XII CBSE (Non-Medical)</p>
+                                    <p class="date">90.6%</p>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <div class="education-date">2018</div>
+                                <div class="education-content">
+                                    <h3>St. Joseph's High School</h3>
+                                    <p class="degree">X ICSE</p>
+                                    <p class="date">93.84% (1st in boys, 3rd overall)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="certifications-tab">
+                            <div class="certification-item">
+                                <div class="cert-icon">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <h3>AWS Machine Learning Foundations</h3>
+                                    <p class="issuer">AWS Academy</p>
+                                    <a href="https://drive.google.com/file/d/1CIx6vv4H97DYXEU700rkneqAftm_Tcbj/view?usp=sharing"
+                                        class="cert-link" target="_blank">View Certificate</a>
+                                </div>
+                            </div>
+                            <div class="certification-item">
+                                <div class="cert-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Data Science Specialization</h3>
+                                    <p class="issuer">Coursera (Johns Hopkins)</p>
+                                    <a href="https://drive.google.com/file/d/1EGeUTLUU9JTnLuO28CiQ98FRsuYGMRzT/view?usp=sharing"
+                                        class="cert-link" target="_blank">View Certificate</a>
+                                </div>
+                            </div>
+                            <!-- Replace TIET Merit Scholarship with LIFI Project Certificate -->
+                            <div class="certification-item">
+                                <div class="cert-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Research Paper: LiFi-based Fee Collection</h3>
+                                    <p class="issuer">International Conference on Innovative Computing and Communication
+                                        (ICICC-2025)</p>
+                                    <div class="cert-links-row">
+                                        <a href="https://drive.google.com/file/d/1CE9rI5-lMUTYj_TboAORCjRxEWr4WLGd/view?usp=sharing"
+                                            class="cert-link" target="_blank">View Certificate</a>
+                                        <a href="#"
+                                            class="cert-link cert-pub-link" target="_blank">
+                                            <i class="fas fa-book-open"></i>
+                                            <span>View Publication</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">Experience</span>
+                </h2>
+                <div class="section-subtitle">My professional journey</div>
+            </div>
+            <div class="experience-container">
+                <div class="experience-timeline improved-timeline">
+                    <div class="timeline-path"></div>
+
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date improved-timeline-date">Jul 2024 - Present</div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Associate Application Engineer</h3>
+                                <h4><a href="https://www.linkedin.com/company/rapidshyp/" class="cert-link" target="_blank">RapidShyp, Gurgaon</a></h4>
+                            </div>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li>Resolved <span class="highlight">200+ critical production issues</span> across
+                                        <span class="highlight">10+ microservices</span>, maintaining <span
+                                            class="highlight">99.9% system uptime</span> and reducing operational
+                                        delays.
+                                    </li>
+                                    <li>Performed <span class="highlight">root cause analysis</span> for high-severity
+                                        incidents using <span class="highlight">SQL, server logs, and Kafka
+                                            monitoring</span>, reducing average
+                                        resolution time by <span class="highlight">40%</span>.</li>
+                                    <li>Streamlined investigation workflows, enabling <span class="highlight">P1/P2
+                                            ticket resolution within 30 minutes</span> and supporting <span
+                                            class="highlight">5,000+ daily transactions</span>.</li>
+                                    <li>Collaborated in sprint meetings with product and engineering teams, contributing
+                                        to <span class="highlight">85%+ on-time sprint delivery</span>.</li>
+                                    <li>Contributed to a <span class="highlight">35% reduction in incident
+                                            recurrence</span> by enhancing monitoring, documentation, and feedback
+                                        loops.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span>MongoDB</span>
+                                <span>SQL</span>
+                                <span>Kafka</span>
+                                <span>Jira</span>
+                                <span>AWS</span>
+                                <span>Server Logs</span>
+                                <span>Microservices</span>
+                                <span>Incident Management</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Experience 2 (duplicate) -->
+                    <!-- <div class="timeline-item">
+                        <div class="timeline-date improved-timeline-date">Jul 2024 - Present</div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Associate Application Engineer</h3>
+                                <h4>RapidShyp, Gurgaon</h4>
+                            </div>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li>Resolved <span class="highlight">200+ critical production issues</span> across
+                                        <span class="highlight">10+ microservices</span>, maintaining <span
+                                            class="highlight">99.9% system uptime</span> and reducing operational
+                                        delays.</li>
+                                    <li>Performed <span class="highlight">root cause analysis</span> for high-severity
+                                        incidents using SQL, server logs, and Kafka monitoring, reducing average
+                                        resolution time by <span class="highlight">40%</span>.</li>
+                                    <li>Streamlined investigation workflows, enabling <span class="highlight">P1/P2
+                                            ticket resolution within 30 minutes</span> and supporting <span
+                                            class="highlight">5,000+ daily transactions</span>.</li>
+                                    <li>Collaborated in sprint meetings with product and engineering teams, contributing
+                                        to <span class="highlight">85%+ on-time sprint delivery</span>.</li>
+                                    <li>Contributed to a <span class="highlight">35% reduction in incident
+                                            recurrence</span> by enhancing monitoring, documentation, and feedback
+                                        loops.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span>Node.js</span>
+                                <span>React</span>
+                                <span>MongoDB</span>
+                                <span>AWS</span>
+                                <span>SQL</span>
+                                <span>Kafka</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- Experience arrows: always in DOM, only visible on mobile via CSS -->
+                <div class="experience-scroll-controls">
+                    <button class="experience-scroll-arrow left" aria-label="Scroll experience left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="experience-scroll-arrow right" aria-label="Scroll experience right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">Projects</span>
+                </h2>
+                <div class="section-subtitle">My featured work</div>
+            </div>
+            <div class="projects-container">
+                <div class="projects-scroll-container">
+                    <div class="projects-scroll">
+                        <!-- NaviGo -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/navigo.jpg" alt="NaviGo" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">Full Stack</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">NaviGo</h3>
+                                <p class="project-description">
+                                    Scalable backend for ride-sharing with RESTful APIs for user management, ride
+                                    creation, and real-time mapping. Integrates Google Maps API for geocoding and
+                                    distance tracking, secured with JWT authentication.
+                                </p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node</span>
+                                    <span>Express</span>
+                                    <span>MongoDB</span>
+                                    <span>Google Maps API</span>
+                                    <span>JWT</span>
+                                    <span>REST APIs</span>
+                                    <span>Postman</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/NaviGo" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MediGenie -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/medigenie.jpg" alt="MediGenie" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">ML/Healthcare</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">MediGenie</h3>
+                                <p class="project-description">
+                                    ML-powered healthcare app that predicts diseases based on symptoms, offering
+                                    real-time health insights and personalized recommendations with a modular backend,
+                                    polished an responsive UI.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Flask</span>
+                                    <span>Scikit-learn</span>
+                                    <span>Pandas</span>
+                                    <span>Bootstrap</span>
+                                    <span>Streamlit</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/MediGenie" class="project-link"
+                                        target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- WhatsApp Chat Analyzer -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/whatsapp.jpg" alt="WhatsApp Chat Analyzer" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">NLP</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">WhatsApp Chat Analyzer</h3>
+                                <p class="project-description">
+                                    NLP-powered analytics tool that transforms WhatsApp chat exports into meaningful
+                                    insights. Delivers sentiment analysis, user activity patterns, and rich
+                                    visualizations—timelines, heatmaps, word clouds, and emoji trends—within seconds.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Streamlit</span>
+                                    <span>Pandas</span>
+                                    <span>NLTK</span>
+                                    <span>Matplotlib</span>
+                                    <span>Seaborn</span>
+                                    <span>Colab</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/WhatsApp-Chat-Analyzer" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Podcast Summarization App -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/podcast.jpg" alt="Podcast Summarization App" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">NLP/API</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Podcast Summarization App</h3>
+                                <p class="project-description">
+                                    NLP-powered web app that fetches podcast episodes via Listen Notes API, transcribes
+                                    them with Assembly AI, and generates concise summaries with chapter breakdowns.
+                                    Supports navigation, JSON export, and transcription saving.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Streamlit</span>
+                                    <span>Listen Notes API</span>
+                                    <span>Assembly AI API</span>
+                                    <span>JSON</span>
+                                    <span>Requests</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/Podcast-Summarization" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Speech Recognition -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/speech.jpg" alt="Speech Recognition" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">Speech/NLP</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Speech Recognition</h3>
+                                <p class="project-description">
+                                    Scalable Python solution for converting audio into text using Assembly AI API.
+                                    Automates transcription, supports multiple formats, and delivers over 90% accuracy
+                                    for lectures, interviews, and business content.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Assembly AI API</span>
+                                    <span>Requests</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/Speech-Recognition" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Disease Prediction System -->
+                        <!-- <div class="project-card>
+                            <div class="project-image">
+                                <img src="images/work-4.jpg" alt="Disease Prediction System" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">ML/Healthcare</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Disease Prediction System</h3>
+                                <p class="project-description">
+                                    Healthcare assistant that predicts diseases based on symptoms using machine
+                                    learning. Provides instant diagnosis and recommendations with high accuracy.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>scikit-learn</span>
+                                    <span>Pandas</span>
+                                    <span>Streamlit</span>
+                                    <span>Matplotlib</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/Disease-Prediction-System" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- LIFI Capstone Project -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/lif.jpg" alt="LIFI Capstone Project" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">IoT</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Li-Fi Capstone Project</h3>
+                                <p class="project-description">
+                                    Automatic toll collection system using LiFi technology. Hardware prototypes with
+                                    Arduino, LED
+                                    transmitters, ESP8266 microcontrollers, and secure WiFi modules for contactless
+                                    tolling.
+                                </p>
+                                <div class="project-tech">
+                                    <span>IoT Hardware (Transmitter, Receiver, Display, LDRs)</span>
+                                    <span>Embedded C</span>
+                                    <span>WiFi modules</span>
+                                    <span>Arduino</span>
+                                    <span>Buggy</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/LIFI-CAPSTONE-PROJECT" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Portfolio Website -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/portfolio.jpg" alt="Portfolio Website" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">Frontend Application</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Portfolio Website</h3>
+                                <p class="project-description">
+                                    Responsive personal portfolio website highlighting professional experience,
+                                    technical expertise, key projects, and achievements. Features smooth navigation,
+                                    interactive sections, and a contact form for direct communication.
+                                </p>
+                                <div class="project-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>EmailJS</span>
+                                    <span>Postimages</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thapar Book Store -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/book.jpg" alt="Thapar Book Store" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badge">E-commerce/FullStack</div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Thapar Book Store</h3>
+                                <p class="project-description">
+                                    Full-stack web app for auctioning and selling used books/notes among students,
+                                    featuring secure authentication, real-time auction updates, and a scalable backend
+                                    system.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Django</span>
+                                    <span>SQLite</span>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                    <span>REST APIs</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Tracer786/SE_Project" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-controls">
+                    <button class="scroll-arrow left-arrow" aria-label="Scroll projects left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="scroll-arrow right-arrow" aria-label="Scroll projects right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">Skills</span>
+                </h2>
+                <div class="section-subtitle">My technical expertise</div>
+            </div>
+            <div class="skills-container">
+                <!-- Technologies Subsection -->
+                <div class="skills-category">
+                    <h3>Technologies</h3>
+                    <div class="skills-grid">
+                        <!-- JavaScript -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#f7df1e;"><i class="fab fa-js"></i></div>
+                            <div class="skill-name">JavaScript</div>
+                        </div>
+                        <!-- Python -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#3776ab;"><i class="fab fa-python"></i></div>
+                            <div class="skill-name">Python</div>
+                        </div>
+                        <!-- HTML5 -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#e34f26;"><i class="fab fa-html5"></i></div>
+                            <div class="skill-name">HTML5</div>
+                        </div>
+                        <!-- CSS3 -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#264de4;"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-name">CSS3</div>
+                        </div>
+                        <!-- React.js -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#61dafb;"><i class="fab fa-react"></i></div>
+                            <div class="skill-name">React.js</div>
+                        </div>
+                        <!-- Node.js -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#68a063;"><i class="fab fa-node-js"></i></div>
+                            <div class="skill-name">Node.js</div>
+                        </div>
+                        <!-- Express.js -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#888888;"><i class="fas fa-server"></i></div>
+                            <div class="skill-name">Express.js</div>
+                        </div>
+                        <!-- MongoDB -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#FFB6C1;"><i class="fas fa-database"></i></div>
+                            <div class="skill-name">MongoDB</div>
+                        </div>
+                        <!-- MySQL -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#FFD600;"><i class="fas fa-database"></i></div>
+                            <div class="skill-name">MySQL</div>
+                        </div>
+                        <!-- Django -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#43B02A;"><i class="fab fa-python"></i></div>
+                            <div class="skill-name">Django</div>
+                        </div>
+                        <!-- Flask -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#8B5C2D;"><i class="fas fa-flask"></i></div>
+                            <div class="skill-name">Flask</div>
+                        </div>
+                        <!-- Bootstrap -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#7952B3;"><i class="fab fa-bootstrap"></i></div>
+                            <div class="skill-name">Bootstrap</div>
+                        </div>
+                        <!-- REST APIs -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#FF6F00;"><i class="fas fa-plug"></i></div>
+                            <div class="skill-name">REST APIs</div>
+                        </div>
+                        <!-- Machine Learning -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#10b981;"><i class="fas fa-robot"></i></div>
+                            <div class="skill-name">Machine Learning</div>
+                        </div>
+                        <!-- Data Science -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#7c3aed;"><i class="fas fa-chart-line"></i></div>
+                            <div class="skill-name">Data Science</div>
+                        </div>
+                        <!-- C/C++ -->
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <div class="skill-name">C/C++</div>
+                        </div>
+                        <!-- Streamlit -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#2496ed;"><i class="fas fa-stream"></i></div>
+                            <div class="skill-name">Streamlit</div>
+                        </div>
+                        <!-- IoT Hardware -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#e34f26;"><i class="fas fa-microchip"></i></div>
+                            <div class="skill-name">IoT Hardware</div>
+                        </div>
+                        <!-- Docker -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#2496ed;"><i class="fab fa-docker"></i></div>
+                            <div class="skill-name">Docker</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools Subsection -->
+                <div class="skills-category">
+                    <h3>Tools</h3>
+                    <div class="skills-grid">
+                        <!-- Git -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#f05032;"><i class="fab fa-git-alt"></i></div>
+                            <div class="skill-name">Git</div>
+                        </div>
+                        <!-- GitHub -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#6e7681;"><i class="fab fa-github"></i></div>
+                            <div class="skill-name">GitHub</div>
+                        </div>
+                        <!-- VS Code -->
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <div class="skill-name">VS Code</div>
+                        </div>
+                        <!-- Jira -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#0052cc;"><i class="fab fa-jira"></i></div>
+                            <div class="skill-name">Jira</div>
+                        </div>
+                        <!-- AWS -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#FF9900;"><i class="fab fa-aws"></i></div>
+                            <div class="skill-name">AWS</div>
+                        </div>
+                        <!-- Postman -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#e34f26;"><i class="fas fa-paper-plane"></i></div>
+                            <div class="skill-name">Postman</div>
+                        </div>
+                        <!-- Colab -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#F9AB00;"><i class="fab fa-google"></i></div>
+                            <div class="skill-name">Colab</div>
+                        </div>
+                        <!-- MATLAB -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#0076a8;"><i class="fas fa-square-root-alt"></i></div>
+                            <div class="skill-name">MATLAB</div>
+                        </div>
+                        <!-- Arduino -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#00979d;"><i class="fas fa-microchip"></i></div>
+                            <div class="skill-name">Arduino</div>
+                        </div>
+                        <!-- Ubuntu/Linux -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#dd4814;"><i class="fab fa-ubuntu"></i></div>
+                            <div class="skill-name">Ubuntu/Linux</div>
+                        </div>
+                        <!-- Tableau -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#00aaff;"><i class="fas fa-chart-bar"></i></div>
+                            <div class="skill-name">Tableau</div>
+                        </div>
+                        <!-- Canva -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#e4405f;"><i class="fas fa-image"></i></div>
+                            <div class="skill-name">Canva</div>
+                        </div>
+                        <!-- Filmora -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#2496ed;"><i class="fas fa-film"></i></div>
+                            <div class="skill-name">Filmora</div>
+                        </div>
+                        <!-- Photoshop -->
+                        <div class="skill-card">
+                            <div class="skill-icon" style="color:#31a8ff;"><i class="fas fa-camera-retro"></i></div>
+                            <div class="skill-name">Photoshop</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements section" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">Achievements</span>
+                </h2>
+                <div class="section-subtitle">Key milestones</div>
+            </div>
+            <div class="achievements-list">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>TIET Merit Excellence Scholarship</h3>
+                    <p class="achievement-details">
+                        Awarded scholarship worth ₹5 Lakh for academic excellence(Top 5%).
+                    </p>
+                    <div class="achievement-date">2020-2022</div>
+                </div>
+                <!-- <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Open Source Contributor</h3>
+                    <p class="achievement-details">
+                        Contributed to open source projects, improving code quality and adding new features.
+                    </p>
+                    <div class="achievement-date">2023</div>
+                </div> -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Hackathon Participation</h3>
+                    <p class="achievement-details">
+                        Took part in 5+ hackathons organized by Thapar societies, securing the Runner-up position in the
+                        university hackathon conducted by the MLSC society.
+
+                    </p>
+                    <div class="achievement-date">2020-2024</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p class="achievement-details">
+                        Secured 93.84% in ICSE 10th and 90.6% in CBSE 12th Board exams, ranking among top academic
+                        performers.
+                    </p>
+                    <div class="achievement-date">2018, 2020</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Research Publication</h3>
+                    <p class="achievement-details">
+                        Published research paper on 'Li-Fi based toll collection system' at ICICC-2025, presenting an
+                        IoT-based contactless tolling solution.
+                        <a href="https://www.ijert.org/lifi-based-toll-collection-system" target="_blank"
+                            style="color: var(--primary-color); font-weight: 600;">View Publication</a>
+                    </p>
+                    <div class="achievement-date">2025</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>DSA Problem Solving</h3>
+                    <p class="achievement-details">
+                        Solved 500+ Data Structures & Algorithms problems across major platforms.
+                    </p>
+                    <div class="achievement-date">2020-Present</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">Contact</span>
+                </h2>
+                <div class="section-subtitle">Get in touch</div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:manpreetchahal0786@gmail.com">manpreetchahal0786@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <a href="tel:+918054651374">+91 80546 51374</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Gurgaon, Haryana, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/in/manpreet-singh-67334b21b/" class="social-icon linkedin"
+                            aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/tracer786" class="social-icon github" aria-label="GitHub"
+                            target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="download-cv">
+                        <a href="docs/Manpreet_Singh_CV.pdf" class="btn btn-primary" download>
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="mobile" name="mobile" placeholder=" ">
+                            <label for="mobile">Mobile Number (optional)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder=" ">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer small-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    &copy; 2024 Manpreet Singh.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1175 @@
+/* Common breakpoints for modern devices:
+   1920px: Large desktop
+   1440px: Standard desktop
+   1366px: Laptop
+   1024px: Small laptop/tablet landscape
+   768px: Tablet portrait
+   414px: Large mobile (iPhone Plus/Pro Max)
+   375px: Medium mobile (iPhone)
+   360px: Small mobile (Android) */
+
+/* XLarge Desktop (1440px to 1919px) */
+@media screen and (max-width: 1919px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--space-lg);
+    }
+    
+    .hero-title {
+        font-size: clamp(2.2rem, 4vw, 3rem);
+    }
+    
+    .project-card {
+        min-width: calc(33.33% - var(--space-md));
+    }
+}
+
+/* Desktop & Laptop (1366px to 1439px) */
+@media screen and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--space-lg);
+    }
+    
+    .hero-content {
+        gap: var(--space-xl);
+    }
+    
+    .projects-scroll-container {
+        padding: 0 var(--space-md);
+    }
+    
+    .project-card {
+        min-width: calc(33.33% - var(--space-md));
+    }
+}
+
+/* Small Laptop & Tablet Landscape (1024px to 1365px) */
+@media screen and (max-width: 1365px) {
+    :root {
+        --space-xl: 2.5rem;
+        --space-lg: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .project-card {
+        min-width: calc(50% - var(--space-md));
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media screen and (max-width: 1023px) {
+    :root {
+        --space-xl: 2rem;
+        --space-lg: 1.5rem;
+        --space-md: 1.25rem;
+    }
+
+    .header {
+        height: 65px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--dark-bg);
+        padding: 80px 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons, .hero-social {
+        justify-content: center;
+    }
+
+    .about-content, 
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .about-tabs {
+        margin-top: var(--space-lg);
+    }
+
+    .project-card {
+        min-width: 100%;
+    }
+}
+
+/* Large Mobile (414px to 767px) */
+@media screen and (max-width: 767px) {
+    :root {
+        --space-xl: 1.75rem;
+        --space-lg: 1.25rem;
+        --space-md: 1rem;
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    .skill-card {
+        min-height: 120px;
+        padding: 0.75rem;
+    }
+
+    .skill-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .achievement-card {
+        padding: var(--space-md);
+    }
+
+    .timeline-content {
+        padding: var(--space-md);
+    }
+
+    /* Mobile Menu Redesign */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--dark-bg);
+        padding: 80px 0 0 0;
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+        font-size: 1.1rem;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .nav-link:hover::before {
+        display: none;
+    }
+
+    /* Experience Card Redesign */
+    .timeline-content {
+        max-height: 80px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .timeline-content.expanded {
+        max-height: 1000px;
+    }
+
+    .timeline-header {
+        position: relative;
+        cursor: pointer;
+        padding-right: 30px;
+    }
+
+    .timeline-header::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+
+    .timeline-content.expanded .timeline-header::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .timeline-details,
+    .timeline-tech {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .timeline-content.expanded .timeline-details,
+    .timeline-content.expanded .timeline-tech {
+        opacity: 1;
+    }
+}
+
+/* Medium Mobile (375px to 413px) */
+@media screen and (max-width: 413px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .achievement-card {
+        padding: var(--space-sm);
+    }
+
+    .contact-form {
+        padding: var(--space-sm);
+    }
+
+    .form-group {
+        margin-bottom: var(--space-sm);
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media screen and (max-width: 374px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .skill-card {
+        min-height: 100px;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
+}
+
+/* Height-based media queries */
+@media screen and (max-height: 800px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 0 var(--space-xl);
+    }
+}
+
+/* Specific device fixes */
+@media screen and (width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (width: 1024px) {
+    .project-card {
+        min-width: calc(50% - var(--space-md));
+    }
+}
+
+/* Navigation fixes for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .nav-menu {
+        padding-top: 100px;
+    }
+}
+
+/* Fix for devices with notches */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .header {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* Fix for mobile landscape mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 var(--space-lg);
+    }
+
+    .hero-content {
+        flex-direction: row;
+    }
+
+    .image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Optimization for touch devices */
+@media (hover: none) {
+    .skill-card:hover {
+        transform: none;
+        box-shadow: 0 0 0 2px var(--primary-color), var(--shadow-lg);
+        border-color: var(--primary-color);
+        z-index: 2;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* Fix sticky hover effects on mobile */
+@media (hover: hover) {
+    .project-card:hover {
+        transform: translateY(-10px);
+    }
+    .skill-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Better tab navigation for mobile */
+@media screen and (max-width: 767px) {
+    .tabs-header {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+    
+    .tab-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Better spacing for mobile forms */
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+
+    /* Improve timeline readability */
+    .timeline-content {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .timeline-tech span {
+        margin: 2px;
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+
+    /* Better project card layout */
+    .project-image {
+        height: 160px;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .project-tech span {
+        margin: 2px;
+        padding: 3px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Better skill grid layout for different screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Specific iPhone fixes */
+@media screen and (device-width: 375px) and (device-height: 812px) {
+    .header {
+        height: 60px;
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .hero {
+        padding-top: calc(80px + env(safe-area-inset-top));
+    }
+}
+
+/* Fix for notched devices */
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: max(var(--space-md), env(safe-area-inset-left));
+        padding-right: max(var(--space-md), env(safe-area-inset-right));
+    }
+}
+
+/* Better mobile menu animation */
+@media screen and (max-width: 767px) {
+    .nav-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    /* Improved mobile social icons */
+    .hero-social {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* Better achievement cards on mobile */
+    .achievement-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .achievement-icon {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Better touch targets for mobile */
+@media (pointer: coarse) {
+    .nav-link,
+    .btn,
+    .project-link,
+    .social-icon {
+        min-height: 44px; /* Apple's recommended minimum */
+        min-width: 44px;
+    }
+}
+
+/* Fix for ultra-wide screens */
+@media screen and (min-width: 2000px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-content {
+        gap: var(--space-xxl);
+    }
+}
+
+/* Landscape mode optimizations */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .section {
+        padding: var(--space-md) 0;
+    }
+    
+    .hero {
+        min-height: auto;
+    }
+    
+    .nav-menu {
+        padding-top: 60px;
+    }
+}
+
+/* Tablet specific improvements */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .project-card {
+        min-height: 450px;
+    }
+
+    /* Add left/right padding to about section text and tabs */
+    .about-text,
+    .about-tabs {
+        padding-left: var(--space-lg) !important;
+        padding-right: var(--space-lg) !important;
+    }
+}
+
+/* iPad/tablet: add left/right padding to about-tabs content (experience/certificates) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .about-tabs .tab-pane {
+        padding-left: var(--space-md) !important;
+        padding-right: var(--space-md) !important;
+    }
+    /* Optionally, add padding to .education-content and .cert-content for extra spacing */
+    .education-content,
+    .cert-content {
+        padding-left: var(--space-sm) !important;
+        padding-right: var(--space-sm) !important;
+    }
+}
+
+/* Improved form responsiveness */
+@media screen and (max-width: 480px) {
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form button[type="submit"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Mobile Navigation Redesign */
+@media screen and (max-width: 767px) {
+    .nav-menu {
+        width: 70%;
+        right: -70%;
+        height: auto;
+        max-height: 100vh;
+        border-bottom-left-radius: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    /* Hero Section Mobile */
+    .hero-buttons .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-social {
+        order: 3;
+        margin-top: 20px;
+    }
+
+    /* About Section Mobile */
+    .about-bio {
+        background: rgba(37, 99, 235, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-bio p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    /* Experience Section Mobile */
+    .timeline-path {
+        display: none;
+    }
+
+    .timeline-item {
+        padding: 0;
+        margin-bottom: var(--space-md);
+        width: 100%;
+    }
+
+    .timeline-date {
+        text-align: center;
+        margin: 0 auto 0.5rem auto;
+        position: relative;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+    }
+
+    .timeline-date::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-150%, -50%);
+        width: 12px;
+        height: 12px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .timeline-header {
+        display: block !important;
+        cursor: default !important;
+        padding-right: 0 !important;
+        position: static !important;
+    }
+
+    .timeline-header::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .timeline-content {
+        max-height: none !important;
+        overflow: visible !important;
+        cursor: default !important;
+        transition: none !important;
+        padding: var(--space-md);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        border-radius: 10px;
+        margin-left: 0;
+    }
+
+    .timeline-details,
+    .timeline-tech {
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    /* Project Section Mobile */
+    .projects-scroll-container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .projects-scroll {
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        display: flex;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    .projects-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card {
+        min-width: 100% !important;
+        max-width: 100%;
+        margin: 0;
+        scroll-snap-align: start;
+        flex: 0 0 100%;
+    }
+
+    .scroll-controls {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-md);
+        margin-top: var(--space-md);
+    }
+
+    .scroll-arrow {
+        display: flex;
+    }
+}
+
+/* iPad/tablet: full width layout and mobile-like navbar/menu */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container,
+    .section,
+    .projects-container,
+    .projects-scroll-container,
+    .about-content,
+    .skills-container,
+    .achievements-list,
+    .contact-content {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .section-header,
+    .section-title,
+    .section-subtitle {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .about-text,
+    .about-tabs,
+    .skills-category,
+    .skills-grid,
+    .contact-info,
+    .contact-form {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .navbar,
+    .header {
+        max-width: 100% !important;
+        width: 100% !important;
+        left: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    /* Navbar menu: full width, mobile style */
+    .nav-menu {
+        width: 100% !important;
+        right: -100% !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-shadow: none !important;
+        background: rgba(30, 41, 59, 0.96) !important;
+    }
+    .nav-menu.active {
+        right: 0 !important;
+    }
+    .hamburger {
+        display: block !important;
+    }
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 1100 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    /* Make nav links block and center, like mobile */
+    .nav-link {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 15px 0 !important;
+        font-size: 1.1rem !important;
+        border-bottom: 1px solid rgba(37, 99, 235, 0.1) !important;
+    }
+    .nav-link:hover::before {
+        display: none !important;
+    }
+    .nav-item {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    /* Hamburger bars: ensure visible */
+    .hamburger .bar {
+        background-color: var(--primary-color) !important;
+    }
+    /* Make scroll controls and experience arrows full width */
+    .scroll-controls,
+    .experience-scroll-controls {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    /* Project cards: one per row for best fit */
+    .project-card {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        scroll-snap-align: start !important;
+        flex: 0 0 100% !important;
+    }
+    .projects-scroll {
+        gap: 0 !important;
+    }
+    /* Skills grid: 3 per row for iPad */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+    }
+    /* Contact info/form: stack vertically */
+    .contact-content {
+        flex-direction: column !important;
+        gap: var(--space-md) !important;
+    }
+    .contact-info,
+    .contact-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: var(--space-md) !important;
+        box-sizing: border-box !important;
+        border-radius: var(--radius-md) !important;
+    }
+}
+
+/* NEW: Hamburger transition for animated open/close */
+.hamburger .bar {
+	transition: all 0.3s ease;
+}
+.hamburger.active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+/* NEW: Constant side padding across sections */
+.container {
+	padding-left: var(--space-md) !important;
+	padding-right: var(--space-md) !important;
+}
+
+/* MOBILE HERO SECTION: Reorder hero content to show image on top */
+@media screen and (max-width: 1023px) {
+	.hero-content {
+		flex-direction: column;
+	}
+	.hero-image {
+		order: -1;
+		margin-bottom: var(--space-md);
+	}
+}
+
+/* ABOUT SECTION: Equal left/right padding for about-text */
+@media screen and (max-width: 1023px) {
+	.about-text {
+		padding-left: var(--space-md);
+		padding-right: var(--space-md);
+	}
+}
+
+/* EXPERIENCE SECTION for mobile: only date with circle, no vertical line or extra circles */
+@media screen and (max-width: 767px) {
+    .experience-timeline {
+        padding: 0;
+    }
+    .timeline-path {
+        display: none !important;
+    }
+    .timeline-item {
+        padding: 0 !important;
+        margin-bottom: var(--space-md);
+        width: 100%;
+        position: relative;
+    }
+    .timeline-item::before {
+        display: none !important;
+    }
+    .timeline-date {
+        text-align: center;
+        margin: 0 auto 0.5rem auto;
+        position: relative;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        padding-left: 0 !important;
+    }
+    .timeline-date::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-150%, -50%);
+        width: 12px;
+        height: 12px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    /* --- FIX: Always show job role and location on mobile --- */
+    .timeline-header {
+        display: block !important;
+        cursor: default !important;
+        padding-right: 0 !important;
+        position: static !important;
+    }
+    /* Remove dropdown arrow on mobile */
+    .timeline-header::after {
+        display: none !important;
+        content: none !important;
+    }
+    /* --- FIX: Always show full content, no expand/collapse --- */
+    .timeline-content {
+        max-height: none !important;
+        overflow: visible !important;
+        cursor: default !important;
+        transition: none !important;
+        padding: var(--space-md);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        border-radius: 10px;
+        margin-left: 0;
+    }
+    .timeline-details,
+    .timeline-tech {
+        opacity: 1 !important;
+        transition: none !important;
+    }
+}
+
+/* NEW: Projects Section Mobile - show one project per view */
+@media screen and (max-width: 767px) {
+    .projects-scroll-container {
+        padding: 0;
+        margin: 0;
+    }
+    .projects-scroll {
+        scroll-snap-type: x mandatory;
+    }
+    .project-card {
+        min-width: 100% !important;
+        margin: 0 auto;
+        scroll-snap-align: center;
+    }
+}
+
+/* EXPERIENCE SECTION: horizontal scroll with arrows for mobile (multiple experiences) */
+@media screen and (max-width: 767px) {
+    .experience-container {
+        position: relative;
+        width: 100%;
+    }
+    .experience-timeline {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: var(--space-md);
+        padding: 0;
+        width: 100%;
+    }
+    .experience-timeline::-webkit-scrollbar {
+        display: none;
+    }
+    .timeline-item {
+        min-width: 100% !important;
+        max-width: 100%;
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        margin-bottom: 0;
+    }
+    /* Hide the vertical timeline path and circles */
+    .timeline-path,
+    .timeline-item::before {
+        display: none !important;
+    }
+    /* Show arrows only on mobile */
+    .experience-scroll-controls {
+        display: flex !important;
+        justify-content: center;
+        gap: var(--space-md);
+        margin-top: var(--space-md);
+    }
+    .experience-scroll-arrow {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background 0.2s, color 0.2s;
+    }
+    .experience-scroll-arrow[disabled] {
+        opacity: 0.3;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    .experience-scroll-arrow:hover {
+        background: var(--primary-color);
+        color: var(--light-color);
+    }
+}
+
+/* SKILLS: 3 per row on mobile */
+@media screen and (max-width: 767px) {
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+        width: 100%;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .skill-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* CONTACT: info card same width as form on mobile */
+@media screen and (max-width: 767px) {
+    .contact-content {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    .contact-info,
+    .contact-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: var(--space-md) !important;
+        box-sizing: border-box;
+        border-radius: var(--radius-md) !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .project-link {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 10px 0;
+        margin-top: 8px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: var(--primary-color);
+        background: rgba(37, 99, 235, 0.09);
+        border-radius: var(--radius-md);
+        box-shadow: none;
+    }
+
+    .project-link:hover {
+        background: var(--primary-color);
+        color: var(--light-color);
+        border-color: var(--primary-dark);
+    }
+}
+
+/* Make mobile navbar more translucent */
+@media screen and (max-width: 767px) {
+    .nav-menu {
+        /* Make mobile navbar less translucent */
+        background: rgba(30, 41, 59, 0.96) !important;
+    }
+}
+
+/* --- Make mobile navbar menu behavior apply up to 1023px (tablet and below) --- */
+@media screen and (max-width: 1023px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--dark-bg);
+        padding: 80px 0 0 0;
+        transition: right 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0;
+        visibility: hidden;
+        border-bottom-left-radius: 20px;
+        max-height: 100vh;
+        transform: translateX(100%);
+    }
+    .nav-menu.active {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .hamburger {
+        display: block;
+    }
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 1100 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* iPad/tablet: show 5 skills per row in skills grid */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 1rem !important;
+    }
+}
