@@ -296,6 +296,12 @@
         padding-right: var(--space-sm) !important;
     }
 
+	/* Add more side padding to hero-content for small mobile */
+    .hero-content {
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+    }
+
     /* Certificate links: stack vertically, each on one line */
     .cert-links-row {
         flex-direction: column;
@@ -1203,5 +1209,6 @@
         gap: 1rem !important;
     }
 }
+
 
 
