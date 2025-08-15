@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper,academicons]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+\ifxetexorluatex
+  \setmainfont{Carlito}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Manpreet Singh}
+\personalinfo{%
+  \email{manpreetchahal0786@gmail.com}
+  \phone{+91 8054651374}
+  \location{Gurgaon, Haryana}
+  \linkedin{\href{https://www.linkedin.com/in/manpreet-singh-67334b21b/}{Linkedin}}
+  \github{\href{https://github.com/tracer786}{Github}}
+}
+
+\begin{fullwidth}
+\makecvheader
+\smallskip
+\cvsection{Education}
+\cvevent{\bf B. Tech. Computer Engineering | Thapar University, Patiala}{}{Aug 2020 -- May 2024}{}
+\begin{itemize}
+    \item CGPA: \textbf{8.39} | Relevant Coursework: \textbf{Data Structures, Algorithms, Machine Learning, Data Science, Database Management Systems, Web Development}
+\end{itemize}
+
+\AtBeginEnvironment{itemize}{\normalsize}
+
+\smallskip
+
+\cvsection{Work Experience}
+
+\cvevent{\bf RapidShyp | Associate Application Engineer}{}{%
+  \begin{tabular}{@{}l@{\hspace{1.5cm}}l@{\hspace{1.5cm}}l@{}}
+    Jul 2024 -- Present & \faMapMarker~Gurgaon & \faLinkedin~\href{https://www.linkedin.com/company/rapidshyp/}{RapidShyp}
+  \end{tabular}
+}{}
+
+\begin{itemize}
+    \item Resolved \textbf{200+ critical production issues} across \textbf{10+ microservices}, maintaining \textbf{99.9\% system uptime} and reducing operational delays.
+
+    \item Performed \textbf{root cause analysis} for \textbf{50+ high-severity incidents} using SQL queries, server logs, and Kafka monitoring, reducing average resolution time by \textbf{40\%}.
+
+    \item Streamlined investigation workflows by managing access to production systems and logs, enabling \textbf{P1/P2 ticket resolution within 30 minutes} and supporting \textbf{5,000+ daily transactions}.
+
+    \item Collaborated in \textbf{20+ sprint meetings} with product and engineering teams, ensuring business-aligned prioritization, contributing to \textbf{85\%+ on-time sprint delivery}.
+
+    \item Contributed to a \textbf{35\% reduction in incident recurrence} across three release cycles by enhancing monitoring practices, knowledge documentation, and feedback loops.
+\end{itemize}
+
+\smallskip
+
+\cvsection{Projects}
+
+\cvsubsection{%
+  NaviGo → \href{https://github.com/Tracer786/NaviGo}{Link}%
+  \hfill%
+  {\small\normalfont\faCalendar~Jan 2024 -- Jun 2024}%
+}
+
+% {\bf Description:} 
+Built a \textbf{scalable ride-sharing platform} with real-time \textbf{user tracking}, \textbf{dynamic fares}, and smart \textbf{address suggestions}. Engineered \textbf{30+ React components}, secured flows with \textbf{JWT-based authentication}, and built \textbf{REST APIs} for \textbf{1,000+ concurrent users}. Integrated \textbf{live geolocation}, \textbf{custom map controls}, and \textbf{robust data validation}.
+
+\smallskip
+
+{\bf Technologies Used:} React.js, Node.js, Express.js, MongoDB, Google Maps API
+
+\smallskip
+
+\cvsubsection{%
+  MediGenie → \href{https://github.com/Tracer786/MediGenie}{Link}%
+  \hfill%
+  {\small\normalfont\faCalendar~Aug 2023 -- Nov 2023}%
+}
+
+% {\bf Description:} 
+A \textbf{disease prediction app} using \textbf{ML}, trained on \textbf{5,000+ records}, covering \textbf{130+ symptoms} and \textbf{40+ diseases}, with \textbf{99\% accuracy}. Delivers real-time predictions and detailed \textbf{health insights} including \textbf{precautions}, \textbf{medications}, \textbf{diets}, and \textbf{workouts}. Designed a modular \textbf{Flask backend} and responsive \textbf{Bootstrap UI}.
+
+\smallskip
+
+{\bf Technologies Used:} Python, Flask, Scikit-learn, Pandas, HTML/CSS (Bootstrap)
+
+\smallskip
+
+\cvsection{Technical Skills}
+
+\cvsubsection{Languages \& Frameworks}  
+• C, C++, Python, JavaScript, SQL  • React, Next.js, Node.js, Express.js
+
+\cvsubsection{Web \& Database Technologies}  
+• HTML, CSS, Bootstrap, Tailwind CSS  • MongoDB, MySQL
+
+\cvsubsection{Tools \& Platforms}  
+• Git, GitHub, VS Code, Jira, MATLAB, Tableau, Colab, Arduino, Ubuntu, AWS
+
+\smallskip
+
+\cvsection{Achievements \& Certifications}
+
+\begin{itemize}
+    \item Solved \textbf{500+ Data Structures \& Algorithms problems} across major platforms, demonstrating strong problem-solving skills.
+
+    \item Completed \textbf{Coursera Data Science Specialization}, gaining hands-on experience in Machine Learning, R programming, and statistical modeling. \href{https://drive.google.com/file/d/1_yAlb61eNS0ru5YCtzNKQIHuNgBNylPS/view?usp=sharing}{\textbf{[Certificate]}}
+
+
+    \item Earned the \textbf{AWS Machine Learning Foundations} badge from AWS Academy, covering core Machine Learning topics and industry use-cases. \href{https://drive.google.com/drive/folders/1KH4L4HD4g7L9vnwvSCemN75vVx4an8ha?usp=sharing}{\textbf{[Certificate]}}
+
+    \item Secured \textbf{93.84\%} in ICSE 10\textsuperscript{th} and \textbf{90.6\%} in CBSE 12\textsuperscript{th} Board exams, ranking among top academic performers.
+
+\end{itemize}
+
+\end{fullwidth}
+\end{document}
