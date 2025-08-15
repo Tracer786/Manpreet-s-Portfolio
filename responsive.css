@@ -290,10 +290,10 @@
         margin-bottom: var(--space-sm);
     }
 
-	/* Add side padding to hero section */
+	/* Add side padding to hero section (force with !important) */
     .hero {
-        padding-left: var(--space-sm);
-        padding-right: var(--space-sm);
+        padding-left: var(--space-sm) !important;
+        padding-right: var(--space-sm) !important;
     }
 
     /* Certificate links: stack vertically, each on one line */
@@ -1203,4 +1203,5 @@
         gap: 1rem !important;
     }
 }
+
 
