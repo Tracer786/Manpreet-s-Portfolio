@@ -290,16 +290,59 @@
         margin-bottom: var(--space-sm);
     }
 
-	/* Add side padding to hero section (force with !important) */
+    /* Remove extra side padding from hero and hero-content */
     .hero {
-        padding-left: var(--space-sm) !important;
-        padding-right: var(--space-sm) !important;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0;
+    }
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
-	/* Add more side padding to hero-content for small mobile */
-    .hero-content {
-        padding-left: 1.2rem !important;
-        padding-right: 1.2rem !important;
+    /* HERO SECTION: Card style for hero-text only, match contact card width and padding */
+    .hero-text {
+        background: var(--card-bg);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-card);
+        border: 1px solid rgba(37, 99, 235, 0.1);
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto var(--space-md) auto;
+        padding: calc(var(--space-lg) * 1.2) !important;
+        box-sizing: border-box;
+    }
+
+    /* Fix hero buttons: prevent overflow, allow wrapping, full width on small screens, smaller font */
+    .hero-buttons {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 8px;
+        width: 100%;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        font-size: 0.92rem;
+        padding: 10px 0;
+        margin-bottom: 0;
+        white-space: normal;
+        word-break: break-word;
+        text-align: center;
+        box-sizing: border-box;
+        line-height: 1.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Certificate links: stack vertically, each on one line */
@@ -316,6 +359,13 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    /* Center align View Publication button when stacked and match width */
+    .cert-pub-link {
+        align-self: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
 
     /* Contact info: fix email overflow */
     .contact-info .info-content a,
@@ -324,6 +374,120 @@
         white-space: normal;
         overflow-wrap: anywhere;
         font-size: 0.97rem;
+    }
+
+    /* Make about-text (about me description) full width like contact card */
+    .about-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        /* Remove right padding if present from desktop styles */
+        padding-right: 0 !important;
+    }
+
+    /* Make about-stats and stat-item full width and stack vertically */
+    .about-stats {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--space-sm) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .stat-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 var(--space-sm) 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Remove left/right padding from about-text and stat cards for true full width */
+    .about-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .about-stats {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .stat-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 var(--space-sm) 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Reduce header (top bar) height on small mobile */
+    .header {
+        height: 52px !important;
+        min-height: 52px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .navbar {
+        min-height: 52px !important;
+        height: 52px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .logo {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.05rem !important;
+    }
+    .hamburger .bar {
+        width: 22px !important;
+        height: 2.5px !important;
+        margin: 4px auto !important;
+    }
+
+    /* Reduce font-size for about me description */
+    .about-bio p {
+        font-size: 0.97rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin-bottom: 15px;
+    }
+
+    /* Match hero description style to about me description, but keep text-align left */
+    .hero-description {
+        font-size: 0.97rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    /* Keep tagline in a single line */
+    .tagline-text {
+        /* white-space: nowrap; */
+        font-size: 1.02rem;
     }
 }
 
@@ -671,6 +835,7 @@
     .about-bio p {
         margin-bottom: 15px;
         line-height: 1.6;
+        font-size: 0.97rem;
     }
 
     /* Experience Section Mobile */
@@ -1207,6 +1372,16 @@
     .skills-grid {
         grid-template-columns: repeat(5, 1fr) !important;
         gap: 1rem !important;
+    }
+}
+
+/* NEW: Reduce vertical gap between about-stats subcards on small mobile */
+@media screen and (max-width: 413px) {
+    .about-stats {
+        gap: 4px !important;
+    }
+    .stat-item {
+        margin-bottom: 4px !important;
     }
 }
 
