@@ -18,6 +18,7 @@
     --linkedin-color: #0A66C2;
     --twitter-color: #1DA1F2;
     --instagram-color: #E4405F;
+    --whatsapp-color: #25D366;
     
     /* Spacing */
     --space-xs: 0.5rem;
@@ -567,6 +568,10 @@ img {
 
 .social-icon.instagram {
     background-color: var(--instagram-color);
+}
+
+.social-icon.whatsapp {
+    background-color: var(--whatsapp-color);
 }
 
 .social-icon:hover {
