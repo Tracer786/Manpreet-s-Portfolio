@@ -215,6 +215,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // For desktop hover scroll fix
+    if (window.innerWidth >= 768) {
+        document.querySelectorAll('.timeline-content').forEach(content => {
+            content.addEventListener('mouseleave', () => {
+                content.scrollTop = 0;
+            });
+        });
+    }
+
     // Project scroll functionality
     const projectsScroll = document.querySelector('.projects-scroll');
     const leftArrow = document.querySelector('.left-arrow');
